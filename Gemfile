@@ -18,6 +18,8 @@ gem 'jquery-turbolinks'
 
 gem 'jbuilder', '~> 1.2'
 
+gem 'google-analytics-rails'
+
 group :doc do
   gem 'sdoc', require: false
 end
