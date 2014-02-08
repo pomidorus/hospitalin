@@ -19,6 +19,7 @@ gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'google-analytics-rails'
+gem 'newrelic_rpm'
 
 group :doc do
   gem 'sdoc', require: false
