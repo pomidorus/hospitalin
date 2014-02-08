@@ -1,0 +1,54 @@
+
+
+
+
+.patient_authorization
+  -##Главная навигация медсестры
+  .container
+    .row
+      .col-xs-12.col-md-12
+        %section.select_user
+          %nav
+            %ul.nav.nav-pills
+              %li.active.patients
+                %a{}
+                  %span Пациентам
+              %li.doctors
+                %a{}
+                  %span Врачам и медсестрам
+
+  .container
+    -#Форма авторизации для пациента
+    .row
+      .col-xs-12.col-md-5
+        .patient_form
+          %section.authorization
+            %form{role: 'form'}
+              %h1.header Персональная история госпитализации
+              .form-group
+                %label{for: "login"}
+                  Для входа введите номер вашего мобильного
+                .row
+                  .col-md-11
+                    %div{style: 'display:flex'}
+                    %input.form-control#login{type: 'tel', placeholder: '+38 093 856-96-11'}
+                    = link_to 'Далее', patient_login_path, class: 'btn btn-primary'
+
+
+.container
+  -#Форма авторизации для медсестры и врача
+  .jumbotron.doctor_form.hidden
+    .row
+      .col-md-5
+        %section.authorization
+          %form{role: 'form'}
+            %h1 Личный рабочий кабинет
+            .form-group
+              %label{for: "login"}
+                Для входа введите логин и пароль
+              .row
+                .col-md-11
+                  %div{style: 'display:flex'}
+                  %input.form-control#login{type: 'text', placeholder: 'a.seleznov'}
+                  %input.form-control#password{type: 'password', placeholder: 'testtest'}
+                  = link_to 'Войти', otdelenie_login_path, class: 'btn btn-primary'

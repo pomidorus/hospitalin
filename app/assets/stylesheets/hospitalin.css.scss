@@ -1,0 +1,111 @@
+// Place all the styles related to the hospitalin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.select_user {
+  margin: 17px 13px;
+  margin-top: 30px;
+
+  li {
+    &.active > a {
+      color: darkred !important;
+      cursor: text;
+      background: -webkit-linear-gradient(top, rgb(249, 249, 249) 0%, rgb(241, 241, 241) 100%) !important;
+      -webkit-box-shadow: 0px 2px 3px 0px rgba(72, 50, 50, 0.3);
+
+      span {
+        border-bottom: none;
+      }
+
+    }
+
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+
+  a {
+    cursor: pointer;
+    color: #444;
+    font-size: 16px;
+
+    &:hover {
+      background-color: white !important;
+      color: darkred;
+
+      span {
+        border-bottom: 1px rgba(darkred, 0.2) solid;
+      }
+    }
+
+    span {
+      border-bottom: 1px rgba(#444, 0.2) solid;
+    }
+  }
+}
+
+
+
+.patient_authorization {
+  background-color: #E9D5B8;
+  background: -webkit-linear-gradient(bottom, rgb(255, 255, 255) 0%, rgb(233, 232, 184) 100%) !important;
+  border-top: 6px rgb(232, 230, 162) solid;
+
+  .header {
+    margin: 11px 0px 18px 0px;
+  }
+}
+
+.patient_form {
+  padding-top: 22px;
+  background-color: none !important;
+}
+
+.doctor_form {
+  padding-top: 22px;
+  background-color: #E9D5B8;
+  background: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgb(160, 233, 214) 75%, white 100%) !important;
+}
+
+
+.authorization {
+  background-color: rgba(#666666, 0.8);
+  padding: 13px 22px 13px 22px;
+  opacity: 0.9;
+  border-radius: 10px;
+
+  input {
+    margin: 9px 0px;
+  }
+
+  h1 {
+    font-size: 18px;
+    color: #EFEFEF;
+    line-height: 1.1em;
+  }
+
+  label {
+    line-height: 1.1em;
+    font-size: 14px;
+    font-weight: normal;
+    color: #EFEFEF;
+  }
+
+  p {
+    line-height: 1.1em;
+    font-size: 13px;
+    color: #CCCCCC;
+    opacity: 0.8;
+
+    a {
+      color: floralwhite;
+      border-bottom: 1px solid floralwhite;
+    }
+
+    &.help-block {
+      margin-top: 13px;
+    }
+  }
+}
+
