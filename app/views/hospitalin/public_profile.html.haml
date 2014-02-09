@@ -9,44 +9,45 @@
               %span.label.label-success
                 Состояние стабильное
 
-.hospitalization
-  .container
-    .row
-      .col-xs-12.col-md-12
-    %section
-      .current_hospitalization
-        %header
-          %h3
-            Госпитализирован 13 декабря
-          %span 3 дня назад
-        .hospital
-          %a{href: '#'} Октябрьская клиническая больница
-          %a{href: '#'} Хирургическое отделение № 2
-        .diagnose
-          Диагноз при госпитализации - отравление шоколадными конфетами
+  .hospitalization
+    .container
+      .row
+        .col-xs-12.col-md-12
+      %section
+        .current_hospitalization
+          %header
+            %h3
+              Госпитализирован 13 декабря
+            %span 3 дня назад
+          .hospital
+            %a{href: '#'} Октябрьская клиническая больница
+            %a{href: '#'} Хирургическое отделение № 2
+          .diagnose
+            Диагноз при госпитализации: поперечный миелит
 
 
-.hospitalization
-  .container
-    .row
-      .col-xs-12.col-md-12
-    %section
-      .current_hospitalization
-        %header
-          %h3
-            Врачи
-        .hospital
-          %a{href: '#'} Петренко А
-          %div Лечащий врач
-          %div +38093 324-34-23
-        .hospital
-          %a{href: '#'} Петренко А
-          %div Дежурная медсестра
-          %div +38093 324-34-23
-        .hospital
-          %a{href: '#'} Петренко А
-          %div Дежурный хирург
-          %div +38093 324-34-23
+  .doctors
+    .container
+      .row
+        .col-xs-12.col-md-12
+      %section
+        .current_hospitalization
+          %header
+            %h3
+              Медицинский персонал
+          %div{style: 'display: -webkit-flex;'}
+            .doctor
+              %a{href: '#'} Петренко А
+              %div Лечащий врач
+              %div +38093 324-34-23
+            .doctor
+              %a{href: '#'} Петренко А
+              %div Дежурная медсестра
+              %div +38093 324-34-23
+            .doctor
+              %a{href: '#'} Петренко А
+              %div Дежурный хирург
+              %div +38093 324-34-23
 
 .hospitalization
   .container
