@@ -1,5 +1,6 @@
 Hospitalin::Application.routes.draw do
 
+  devise_for :users
   root 'hospitalin#main'
 
 

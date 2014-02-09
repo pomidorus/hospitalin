@@ -1,3 +1,6 @@
+- if user_signed_in?
+  %h1= "Logged as #{current_user.email}"
+
 .patient_authorization.patient_color
   -##Главная навигация медсестры
   .container
@@ -18,17 +21,19 @@
       .col-xs-12.col-md-5
         .patient_form
           %section.authorization
-            %form{role: 'form'}
+            = form_tag session_path(:user) do
               %h1.header Персональная история госпитализации
               .form-group
-                %label{for: "login"}
+                %label{for: "email"}
                   Для входа или регистрации введите адресс электронной почты
                 .row
                   .col-xs-11.col-md-11
                     %div{style: 'display: -webkit-flex'}
-                      %input.form-control#login{type: 'text', placeholder: 'test@gmail.com'}
-                      = button_to 'Далее', patient_login_path, class: 'btn btn-primary'
-                %p demo: test@gmail.com
+                      = text_field_tag 'user[email]', nil, placeholder: ''
+                      = password_field_tag 'user[password]'
+                      = check_box_tag 'user[remember_me]'
+                      = button_to 'Далее', nil, class: 'btn btn-primary'
+                %p demo: test@patient.com
 
     -#Форма авторизации для медсестры и врача
     .row
@@ -47,3 +52,15 @@
                     %p demo doctor: aseleznov testdoctor
                     %p demo nurse: mkuzmenko testnurse
                     = button_to 'Войти', otdelenie_login_path, class: 'btn btn-primary'
+
+
+.container
+  .row
+    .col-md-5
+    = form_tag session_path(:user) do
+      = text_field_tag 'user[email]'
+      = password_field_tag 'user[password]'
+      = check_box_tag 'user[remember_me]'
+      = label_tag 'user[remember_me]', 'Remember me'
+      %button Sign in
+      = link_to "Forgot your password?", new_password_path(:user)

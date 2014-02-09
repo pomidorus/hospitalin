@@ -22,6 +22,7 @@ gem 'google-analytics-rails'
 gem 'newrelic_rpm'
 
 gem 'devise'
+gem 'meta_request'
 
 group :doc do
   gem 'sdoc', require: false
