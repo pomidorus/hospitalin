@@ -19,7 +19,7 @@
             %h3
               Госпитализирован 13 декабря
             %span 3 дня назад
-          .hospital
+          .hospital{style: 'margin-top: 10px;'}
             %a{href: '#'} Октябрьская клиническая больница
             %a{href: '#'} Хирургическое отделение № 2
           .diagnose
@@ -35,17 +35,17 @@
           %header
             %h3
               Медицинский персонал
-          %div{style: 'display: -webkit-flex;'}
-            .doctor
+          %div{style: 'display: -webkit-flex; margin-top: 10px;'}
+            .doctor{style: 'margin-right: 30px;'}
               %a{href: '#'} Петренко А
               %div Лечащий врач
               %div +38093 324-34-23
-            .doctor
-              %a{href: '#'} Петренко А
+            .doctor{style: 'margin-right: 30px;'}
+              %a{href: '#'} Семенова В
               %div Дежурная медсестра
               %div +38093 324-34-23
             .doctor
-              %a{href: '#'} Петренко А
+              %a{href: '#'} Автандил К
               %div Дежурный хирург
               %div +38093 324-34-23
 
@@ -54,19 +54,40 @@
     .row
       .col-xs-12.col-md-12
     %section
-      .current_hospitalization
-        %header
+      .current_medicine
+        %header{style: 'margin-bottom: 10px;'}
           %h3
             Список необходимых лекарств и диагностических процедур
-        .hospital
-          %a{href: '#'} Петренко А
-          %div Лечащий врач
-          %div +38093 324-34-23
-        .hospital
-          %a{href: '#'} Петренко А
-          %div Дежурная медсестра
-          %div +38093 324-34-23
-        .hospital
-          %a{href: '#'} Петренко А
-          %div Дежурный хирург
-          %div +38093 324-34-23
+        .medicine{style: 'margin-bottom: 5px;'}
+          .row
+            .col-xs-2.col-md-2
+              %div
+                %a{href: '#'} Реосорбент 200мл
+            .col-xs-6.col-md-1
+              %div
+                14 грн/шт
+            .col-xs-6.col-md-1
+              %div
+                3 шт.
+        .medicine{style: 'margin-bottom: 5px;'}
+          .row
+            .col-xs-2.col-md-2
+              %div
+                %a{href: '#'} Глюкоза 400мл
+            .col-xs-6.col-md-1
+              %div
+                20 грн/шт
+            .col-xs-6.col-md-1
+              %div
+                3 шт.
+        .medicine{style: 'margin-bottom: 5px;'}
+          .row
+            .col-xs-2.col-md-2
+              %div
+                %a{href: '#'} Система
+            .col-xs-6.col-md-1
+              %div
+                5 грн/шт
+            .col-xs-6.col-md-1
+              %div
+                3 шт.
