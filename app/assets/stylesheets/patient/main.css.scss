@@ -1,11 +1,13 @@
 .patient_navigation {
   margin: 17px 13px;
   margin-top: 30px;
-  margin-left: 0;
-  position: relative;
-  left: -15px;
+//  position: relative;
+//  left: -15px;
 
   li {
+
+    margin-right: 20px;
+
     &.active > a {
       color: darkred !important;
       cursor: text;
@@ -29,8 +31,9 @@
     font-size: 16px;
 
     &:hover {
-      background-color: white !important;
+      background-color: rgba(white, 0.5) !important;
       color: darkred;
+
 
       span {
         border-bottom: 1px rgba(darkred, 0.2) solid;

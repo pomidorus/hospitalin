@@ -1,0 +1,33 @@
+.documentation_page
+
+  -##Главная навигация доктора
+  .container
+    .row
+      .col-xs-12.col-md-12
+        %section.patient_navigation
+          %nav
+            %ul.nav.nav-pills
+              %li
+                =link_to doctor_root_path do
+                  %span Пациенты
+              %li.active
+                %a{}
+                  %span Документация
+
+  %div{style: 'margin-top: 40px; margin-left: 45px;'}
+    .container
+      .row
+        .col-xs-12.col-md-12
+          %h2 Медицинская документация
+          .documents
+            .document{style: 'display: -webkit-flex;'}
+              .document_icon
+                =image_tag 'pdf-icon.png', size: '20x20'
+              %div{style: 'position: relative; top: 2px; margin-left: 5px;'}
+                .document_name
+                  %a{href: 'https://www.dropbox.com/s/xfqqcfro4unrvvc/forma%20003_o.pdf'}
+                    Медицинская карта стационарного больного
+                .document_type
+                  Форма первичной учетной документации № 003/о
+                .document_size
+                  (PDF, 685 КБ)

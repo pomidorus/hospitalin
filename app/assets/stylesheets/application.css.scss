@@ -15,6 +15,12 @@
 
 @import "bootstrap";
 
+.navbar-brand {
+  padding-left: 0;
+  position: relative;
+  left: 0px;
+}
+
 .navbar {
   border-radius: 0px !important;
 }

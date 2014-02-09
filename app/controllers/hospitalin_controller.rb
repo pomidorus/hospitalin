@@ -4,6 +4,10 @@ class HospitalinController < ApplicationController
       if current_user.patient?
         redirect_to :patient_root
       end
+      if current_user.doctor?
+        redirect_to :doctor_root
+      end
+
     end
   end
 
