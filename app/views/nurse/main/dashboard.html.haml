@@ -60,9 +60,7 @@
                     %input.hidden{type: 'text'}
                 .patient_diagnos
                   .field
-                    %label Диагноз при госпитализации
-                    %input{type: 'text'}
-
+                    = patient.input :diagnose_pre, label: 'Диагноз при госпитализации'
                 .patient_palata
                   .field
                     %label Номер палаты
@@ -106,11 +104,6 @@
                   .field
                     .patient_add
                       = button_to 'Госпитализировать', nil, class: 'btn btn-primary'
-          .col-xs-12.col-md-6
-            %section
-              %header
-                %h4
-                  %a{} Журнал госпитализаций
 
 
     %div{style: 'margin-top: 20px; margin-left: 0px;'}

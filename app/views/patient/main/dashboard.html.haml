@@ -1,4 +1,4 @@
-.day_raspisanie
+.day_raspisanie_patient
   .container
     .row
       .col-xs-12.col-md-12
@@ -8,47 +8,46 @@
           %item
             8:00 - 10:00 Проветривание палат
 
+.gradient_patient
+  .container
+    .row
+      .col-xs-12.col-md-12
+        -##Главная навигация
+        %section.patient_navigation
+          %nav
+            %ul.nav.nav-pills
+              %li.active
+                %a{}
+                  %span Профиль
+              %li
+                = link_to '#' do
+                  %span Госпитализации
+              %li
+                %a{}
+                  %span Назначения
+              %li
+                %a{}
+                  %span Диагностика
+              %li
+                %a{}
+                  %span Операции
 
-.container
-  .row
-    .col-xs-12.col-md-12
-      -##Главная навигация
-      %section.patient_navigation
-        %nav
-          %ul.nav.nav-pills
-            %li.active
-              %a{}
-                %span Профиль
-            %li
-              = link_to '#' do
-                %span Госпитализации
-            %li
-              %a{}
-                %span Назначения
-            %li
-              %a{}
-                %span Диагностика
-            %li
-              %a{}
-                %span Операции
+  .patient_profile
 
-.patient_profile
-
-  .hospitalization
-    .container
-      .row
-        .col-xs-12.col-md-12
-      %section
-        %header
-          %h2
-            Госпитализация
-        .current_hospitalization
-          %header
-            %h3
-              Госпитализирован 13 декабря
-            %span 3 дня назад
-          .hospital
-            %a{href: '#'} Октябрьская клиническая больница
-            %a{href: '#'} Хирургическое отделение № 2
-          .diagnose
-            Диагноз при госпитализации - отравление шоколадными конфетами
+    .hospitalization
+      .container
+        .row
+          .col-xs-12.col-md-12
+        %section
+          %header{style: 'margin-bottom: 15px;'}
+            %h2
+              Госпитализация
+          .current_hospitalization
+            %header{style: 'margin-bottom: 10px;'}
+              %h3
+                Госпитализирован 9 февраля
+              %span 4 часа назад
+            .hospital
+              %a{href: '#'} Октябрьская клиническая больница
+              %a{href: '#'} Хирургическое отделение № 2
+            .diagnose= "Диагноз при госпитализации: #{current_user.patients.first.diagnose_pre}"

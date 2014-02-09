@@ -17,7 +17,7 @@ class Nurse::PatientsController < ApplicationController
 
   private
   def patient_params
-    params.require(:patient).permit(:email, :description, :parent)
+    params.require(:patient).permit(:email, :diagnose_pre, :parent)
   end
 
 end

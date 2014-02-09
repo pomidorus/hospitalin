@@ -1,11 +1,21 @@
+.day_raspisanie_patient {
+  background-color: rgb(232, 230, 162);
+  padding: 12px 0px 13px 0px;
+  line-height: 1.5em;
+}
+
+
+.gradient_patient {
+  border-top: 6px rgb(204, 202, 143) solid;
+  background: -webkit-linear-gradient(bottom, rgb(255, 255, 255) 0%, rgb(204, 202, 143) 100%) !important;
+}
+
+
+
 .patient_navigation {
   margin: 39px 0px 39px 0px;
   position: relative;
   left: -15px;
-//  margin: 17px 13px;
-//  margin-top: 30px;
-//  position: relative;
-//  left: -15px;
 
   li {
 
