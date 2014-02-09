@@ -24,6 +24,8 @@ gem 'newrelic_rpm'
 gem 'devise'
 gem 'meta_request'
 
+gem 'simple_form'
+
 group :doc do
   gem 'sdoc', require: false
 end

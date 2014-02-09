@@ -12,6 +12,6 @@
               %li
                 = link_to 'Публичная страница', public_profile_path(current_user.public_token)
               %li
-                %a{}= current_user.email
+                %a{}= current_user.name
               %li
                 = link_to 'Выйти', destroy_user_session_path, method: :delete

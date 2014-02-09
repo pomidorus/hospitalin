@@ -33,15 +33,13 @@
             %section.hosp_form
               %header
                 %h3 Госпитализация больного
-              %form
+              = simple_form_for [:nurse, @patient] do |patient|
                 .patient_phone
                   .field
-                    %label Имейл
-                    %input{type: 'text', placeholder: ''}
+                    = patient.input :email, label: 'Имейл'
                 .patient_inic
                   .field
-                    %label Имя Отчество
-                    %input{type: 'text'}
+                    = patient.input :parent, label: 'Имя Отчество'
                 .patient_vozrast
                   .field
                     %label Полных лет

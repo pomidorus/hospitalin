@@ -9,3 +9,6 @@ doctor_2  = User.create!(email: 'test_2@doctor.com', password: 'testtest',  role
 
 nurse_1   = User.create!(email: 'test_1@nurse.com', password: 'testtest',   role: 'nurse', name: 'Антонина Некрасова', title: 'медсестра')
 nurse_2   = User.create!(email: 'test_2@nurse.com', password: 'testtest',   role: 'nurse', name: 'Элеонора Кабанова', title: 'медсестра')
+
+
+Patient.delete_all

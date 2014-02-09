@@ -1,0 +1,50 @@
+.main_nurse_page
+
+  .day_raspisanie
+    .container
+      .row
+        .col-xs-12.col-md-12
+          %section
+            %header
+              %a{href: '#'} Расписание дня
+            %item
+              8:00 - 10:00 Проветривание палат
+
+  .gradient
+    .container
+      .row
+        .col-xs-12.col-md-12
+          %section.patient_navigation
+            %nav
+              %ul.nav.nav-pills
+                %li
+                  =link_to nurse_root_path do
+                    %span Госпитализация
+                %li
+                  =link_to nurse_patients_path do
+                    %span Пациенты
+                %li
+                  =link_to nurse_documentation_path do
+                    %span Документация
+
+
+    .hospitalisation
+      .container
+        .row
+          .col-xs-12.col-md-6
+            %section.hosp_form
+              %header
+                %h3 Больной госпитализирован
+
+              .documents
+                .document{style: 'display: -webkit-flex;'}
+                  .document_icon
+                    =image_tag 'pdf-icon.png', size: '20x20'
+                  %div{style: 'position: relative; top: 2px; margin-left: 5px;'}
+                    .document_name
+                      %a{href: 'https://www.dropbox.com/s/xfqqcfro4unrvvc/forma%20003_o.pdf'}
+                        Медицинская карта стационарного больного № 4534
+                    .document_type
+                      Форма первичной учетной документации № 003/о
+                    .document_size
+                      (PDF, 685 КБ)
