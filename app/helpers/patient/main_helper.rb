@@ -1,0 +1,2 @@
+module Patient::MainHelper
+end

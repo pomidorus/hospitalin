@@ -1,0 +1,52 @@
+
+.patient_authorization.patient_color
+  -##Главная навигация медсестры
+  .container
+    .row
+      .col-xs-12.col-md-12
+        %section.select_user
+          %nav
+            %ul.nav.nav-pills
+              %li.active.patients
+                %a{}
+                  %span Пациентам
+              %li.doctors
+                %a{}
+                  %span Врачам и медработникам
+
+    -#Форма авторизации для пациента
+    .row
+      .col-xs-12.col-md-5
+        .patient_form
+          %section.authorization
+            = form_tag session_path(:user) do
+              %h1.header Персональная история госпитализации
+              .form-group
+                %label{for: "email"}
+                  Для входа или регистрации введите адресс электронной почты
+                .row
+                  .col-xs-11.col-md-11
+                    %div{style: 'display: -webkit-flex'}
+                      = text_field_tag 'user[email]', nil, placeholder: ''
+                      = hidden_field_tag 'user[password]', 'testtest'
+                      = hidden_field_tag 'user[remember_me]', 'yes'
+                      = button_to 'Далее', nil, class: 'btn btn-primary'
+                %p demo: test@patient.com
+
+    -#Форма авторизации для медсестры и врача
+    .row
+      .col-md-5
+        .doctor_form.hidden
+          %section.authorization
+            = form_tag session_path(:user) do
+              %h1.header Личный рабочий кабинет
+              .form-group
+                .row
+                  .col-xs-11.col-md-11
+                    %div{style: 'display: -webkit-flex'}
+                      = text_field_tag 'user[email]', nil, placeholder: ''
+                      = hidden_field_tag 'user[password]', 'testtest'
+                      = hidden_field_tag 'user[remember_me]', 'yes'
+                      = button_to 'Далее', nil, class: 'btn btn-primary'
+                %p demo doctor: test@doctor.com
+                %p demo nurse: test@nurse.com

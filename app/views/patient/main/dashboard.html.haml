@@ -1,0 +1,54 @@
+.day_raspisanie
+  .container
+    .row
+      .col-xs-12.col-md-12
+        %section
+          %header
+            %a{href: '#'} Расписание дня
+          %item
+            8:00 - 10:00 Проветривание палат
+
+
+.container
+  .row
+    .col-xs-12.col-md-12
+      -##Главная навигация
+      %section.patient_navigation
+        %nav
+          %ul.nav.nav-pills
+            %li.active
+              %a{}
+                %span Профиль
+            %li
+              = link_to '#' do
+                %span Госпитализации
+            %li
+              %a{}
+                %span Назначения
+            %li
+              %a{}
+                %span Диагностика
+            %li
+              %a{}
+                %span Операции
+
+.patient_profile
+
+  .hospitalization
+    .container
+      .row
+        .col-xs-12.col-md-12
+      %section
+        %header
+          %h2
+            Госпитализация
+        .current_hospitalization
+          %header
+            %h3
+              Госпитализирован 13 декабря
+            %span 3 дня назад
+          .hospital
+            %a{href: '#'} Октябрьская клиническая больница
+            %a{href: '#'} Хирургическое отделение № 2
+          .diagnose
+            Диагноз при госпитализации - отравление шоколадными конфетами

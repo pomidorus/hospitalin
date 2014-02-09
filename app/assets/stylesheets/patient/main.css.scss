@@ -1,0 +1,45 @@
+.patient_navigation {
+  margin: 17px 13px;
+  margin-top: 30px;
+  margin-left: 0;
+  position: relative;
+  left: -15px;
+
+  li {
+    &.active > a {
+      color: darkred !important;
+      cursor: text;
+      background: -webkit-linear-gradient(top, rgb(249, 249, 249) 0%, rgb(241, 241, 241) 100%) !important;
+      -webkit-box-shadow: 0px 2px 3px 0px rgba(72, 50, 50, 0.3);
+
+      span {
+        border-bottom: none;
+      }
+
+    }
+
+    &:first-child {
+      //      margin-right: 15px;
+    }
+  }
+
+  a {
+    cursor: pointer;
+    color: #444;
+    font-size: 16px;
+
+    &:hover {
+      background-color: white !important;
+      color: darkred;
+
+      span {
+        border-bottom: 1px rgba(darkred, 0.2) solid;
+      }
+    }
+
+    span {
+      border-bottom: 1px rgba(#444, 0.2) solid;
+    }
+  }
+}
+
