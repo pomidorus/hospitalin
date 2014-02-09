@@ -1,0 +1,51 @@
+.patients_nurse_page
+  .day_raspisanie
+    .container
+      .row
+        .col-xs-12.col-md-12
+          %section
+            %header
+              %a{href: '#'} Расписание дня
+            %item
+              8:00 - 10:00 Проветривание палат
+
+  .container
+    .row
+      .col-xs-12.col-md-12
+        %section.patient_navigation
+          %nav
+            %ul.nav.nav-pills
+              %li
+                =link_to nurse_root_path do
+                  %span Госпитализация
+              %li.active
+                %a{}
+                  %span Пациенты
+              %li
+                =link_to nurse_documentation_path do
+                  %span Документация
+
+
+  .patients
+    .container
+      .row
+        .col-xs-12.col-md-12
+          %section
+            %header
+              %h2.link_index
+                %a{href: '#'} Пациенты отделения
+            %patient
+              .patient_if
+                АС
+              .patient_number
+                № 35467
+              .patient_diagnose
+                Обострение язвенной болезни
+              .patient_age_sex
+                29 M
+              .palata
+                %a{href: '#'} палата № 6
+                .action
+                  %a{href: '#'} Перевести в другую палату
+              .medical
+                %a{href: '#'} Капельница
