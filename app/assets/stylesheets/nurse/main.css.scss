@@ -4,13 +4,13 @@
   line-height: 1.5em;
 }
 
+.gradient {
+  border-top: 6px rgb(160, 232, 226) solid;
+  background: -webkit-linear-gradient(bottom, rgb(255, 255, 255) 0%, rgb(161, 204, 200) 100%) !important;
+}
+
 
 .main_nurse_page {
-
-  .gradient {
-    border-top: 6px rgb(160, 232, 226) solid;
-    background: -webkit-linear-gradient(bottom, rgb(255, 255, 255) 0%, rgb(161, 204, 200) 100%) !important;
-  }
 
   .hospitalisation {
     position: relative;
@@ -48,12 +48,17 @@
 
 .documentation_nurse_page {
 
-  .documents {
-    margin: 20px 0px 0px 0px;
+}
 
-    .document_type, .document_size {
-      font-size: 13px;
-      color: darkgrey;
-    }
+.documents {
+  margin: 20px 0px 0px 0px;
+
+  .document_type, .document_size {
+    font-size: 13px;
+    color: darkgrey;
+  }
+
+  .document {
+    margin-bottom: 15px;
   }
 }

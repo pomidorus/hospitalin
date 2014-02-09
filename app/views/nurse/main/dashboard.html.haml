@@ -60,6 +60,11 @@
                           %a{}
                             %span от 60
                     %input.hidden{type: 'text'}
+                .patient_diagnos
+                  .field
+                    %label Диагноз при госпитализации
+                    %input{type: 'text'}
+
                 .patient_palata
                   .field
                     %label Номер палаты
@@ -99,10 +104,6 @@
                           %a{}
                             %span Петров
                     %input.hidden{type: 'text'}
-                .patient_diagnos
-                  .field
-                    %label Диагноз при госпитализации
-                    %input{type: 'text'}
                 .action
                   .field
                     .patient_add
@@ -114,7 +115,7 @@
                   %a{} Журнал госпитализаций
 
 
-    %div{style: 'margin-top: 0px; margin-left: 0px;'}
+    %div{style: 'margin-top: 20px; margin-left: 0px;'}
       .container
         .row
           .col-xs-12.col-md-12
@@ -130,3 +131,14 @@
                     Форма первичной учетной документации № 003/о
                   .document_size
                     (PDF, 685 КБ)
+              .document{style: 'display: -webkit-flex;'}
+                .document_icon
+                  =image_tag 'pdf-icon.png', size: '20x20'
+                %div{style: 'position: relative; top: 2px; margin-left: 5px;'}
+                  .document_name
+                    %a{href: 'https://www.dropbox.com/s/xfqqcfro4unrvvc/forma%20003_o.pdf'}
+                      Заявление на обработку персональных данных
+                  .document_type
+                    Форма вторичной учетной документации № 27
+                  .document_size
+                    (PDF, 38 КБ)
