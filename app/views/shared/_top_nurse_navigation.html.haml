@@ -9,10 +9,12 @@
               Hospitalin
           %div{style: 'padding: 0 16px;'}
             %ul.nav.navbar-nav.navbar-right{style: 'color: white;'}
+              %li{style: 'margin-right: 30px;'}
+                %a{href: '#'} Хирургическое отделение №1
               %li
                 %div.user_image
                   =image_tag 'sister.png', width: '44px', height: '44px'
-              %li
+              %li{style: 'margin-right: 20px;'}
                 %a
                   %div.user_name{style: 'font-size: 14px; font-weight: bold'}= current_user.name
                   %div.user_status{style: 'opacity: 0.6'}= current_user.title

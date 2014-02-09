@@ -1,6 +1,5 @@
 Hospitalin::Application.routes.draw do
 
-  get "main/dashboard"
   devise_for :users
   root 'hospitalin#main'
   get  'public/:token', to: 'hospitalin#public_profile', as: :public_profile
@@ -17,6 +16,7 @@ Hospitalin::Application.routes.draw do
 
   namespace :nurse do
     root 'main#dashboard'
+    resources :patients
     get  'documentation', to: 'main#documentation', as: :documentation
   end
 
