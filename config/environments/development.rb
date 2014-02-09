@@ -12,4 +12,6 @@ Hospitalin::Application.configure do
   config.assets.debug = true
 
   GA.tracker = "UA-47892264-1"
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

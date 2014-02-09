@@ -1,4 +1,4 @@
-.patient_authorization
+.patient_authorization.patient_color
   -##Главная навигация медсестры
   .container
     .row
@@ -11,7 +11,7 @@
                   %span Пациентам
               %li.doctors
                 %a{}
-                  %span Врачам и медсестрам
+                  %span Врачам и медработникам
 
     -#Форма авторизации для пациента
     .row
@@ -24,26 +24,26 @@
                 %label{for: "login"}
                   Для входа или регистрации введите адресс электронной почты
                 .row
-                  .col-md-11
+                  .col-xs-11.col-md-11
                     %div{style: 'display: -webkit-flex'}
                       %input.form-control#login{type: 'text', placeholder: 'test@gmail.com'}
                       = button_to 'Далее', patient_login_path, class: 'btn btn-primary'
                 %p demo: test@gmail.com
 
-.container
-  -#Форма авторизации для медсестры и врача
-  .jumbotron.doctor_form.hidden
+    -#Форма авторизации для медсестры и врача
     .row
       .col-md-5
-        %section.authorization
-          %form{role: 'form'}
-            %h1 Личный рабочий кабинет
-            .form-group
-              %label{for: "login"}
-                Для входа введите логин и пароль
-              .row
-                .col-md-11
-                  %div{style: 'display:flex'}
-                  %input.form-control#login{type: 'text', placeholder: 'a.seleznov'}
-                  %input.form-control#password{type: 'password', placeholder: 'testtest'}
-                  = link_to 'Войти', otdelenie_login_path, class: 'btn btn-primary'
+        .doctor_form.hidden
+          %section.authorization
+            %form{role: 'form'}
+              %h1.header Личный рабочий кабинет
+              .form-group
+                .row
+                  .col-xs-11.col-md-11
+                    #label{for: 'login'} Логин
+                    %input.form-control#login{type: 'text', placeholder: 'aseleznov'}
+                    #label{for: 'password'} Пароль
+                    %input.form-control#password{type: 'password', placeholder: 'testdoctor'}
+                    %p demo doctor: aseleznov testdoctor
+                    %p demo nurse: mkuzmenko testnurse
+                    = button_to 'Войти', otdelenie_login_path, class: 'btn btn-primary'
