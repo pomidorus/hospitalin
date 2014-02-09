@@ -1,6 +1,3 @@
-- if user_signed_in?
-  %h1= "Logged as #{current_user.email}"
-
 .patient_authorization.patient_color
   -##Главная навигация медсестры
   .container
@@ -30,8 +27,8 @@
                   .col-xs-11.col-md-11
                     %div{style: 'display: -webkit-flex'}
                       = text_field_tag 'user[email]', nil, placeholder: ''
-                      = password_field_tag 'user[password]'
-                      = check_box_tag 'user[remember_me]'
+                      = hidden_field_tag 'user[password]', 'testtest'
+                      = hidden_field_tag 'user[remember_me]', 'yes'
                       = button_to 'Далее', nil, class: 'btn btn-primary'
                 %p demo: test@patient.com
 
@@ -40,27 +37,15 @@
       .col-md-5
         .doctor_form.hidden
           %section.authorization
-            %form{role: 'form'}
+            = form_tag session_path(:user) do
               %h1.header Личный рабочий кабинет
               .form-group
                 .row
                   .col-xs-11.col-md-11
-                    #label{for: 'login'} Логин
-                    %input.form-control#login{type: 'text', placeholder: 'aseleznov'}
-                    #label{for: 'password'} Пароль
-                    %input.form-control#password{type: 'password', placeholder: 'testdoctor'}
-                    %p demo doctor: aseleznov testdoctor
-                    %p demo nurse: mkuzmenko testnurse
-                    = button_to 'Войти', otdelenie_login_path, class: 'btn btn-primary'
-
-
-.container
-  .row
-    .col-md-5
-    = form_tag session_path(:user) do
-      = text_field_tag 'user[email]'
-      = password_field_tag 'user[password]'
-      = check_box_tag 'user[remember_me]'
-      = label_tag 'user[remember_me]', 'Remember me'
-      %button Sign in
-      = link_to "Forgot your password?", new_password_path(:user)
+                    %div{style: 'display: -webkit-flex'}
+                      = text_field_tag 'user[email]', nil, placeholder: ''
+                      = hidden_field_tag 'user[password]', 'testtest'
+                      = hidden_field_tag 'user[remember_me]', 'yes'
+                      = button_to 'Далее', nil, class: 'btn btn-primary'
+                %p demo doctor: test@doctor.com
+                %p demo nurse: test@nurse.com

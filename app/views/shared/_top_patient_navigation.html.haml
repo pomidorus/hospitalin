@@ -1,0 +1,17 @@
+.main_navigation
+  .container
+    .row
+      .col-xs-12.col-md-12
+        %nav.navbar.navbar-default{role: "navigation", style: 'margin-bottom: 0px;'}
+          = link_to root_path, class: 'navbar-brand' do
+            = image_tag 'logo.png', size: '55x55', style: 'opacity: 0.7;'
+            %span{style: 'position: relative; top:6px; margin-left: 10px; color: #BA2B22; font-size: 25pt; font-weight: bold'}
+              Hospitalin
+          %div{style: 'padding: 0 16px;'}
+            %ul.nav.navbar-nav.navbar-right{style: 'color: white;'}
+              %li
+                = link_to 'Публичная страница', public_profile_path(current_user.public_token)
+              %li
+                %a{}= current_user.email
+              %li
+                = link_to 'Выйти', destroy_user_session_path, method: :delete
