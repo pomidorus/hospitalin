@@ -7,6 +7,9 @@ class HospitalinController < ApplicationController
       if current_user.doctor?
         redirect_to :doctor_root
       end
+      if current_user.nurse?
+        redirect_to :nurse_root
+      end
 
     end
   end

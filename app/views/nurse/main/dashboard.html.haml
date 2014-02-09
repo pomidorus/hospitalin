@@ -1,0 +1,171 @@
+.main_nurse_page
+
+  .day_raspisanie
+    .container
+      .row
+        .col-xs-12.col-md-12
+          %section
+            %header
+              %a{href: '#'} Расписание дня
+            %item
+              8:00 - 10:00 Проветривание палат
+
+  .container
+    .row
+      .col-xs-12.col-md-12
+        %section.patient_navigation
+          %nav
+            %ul.nav.nav-pills
+              %li.active
+                %a{}
+                  %span Госпитализация
+              %li
+                %a{}
+                  %span Пациенты
+              %li
+                =link_to nurse_documentation_path do
+                  %span Документация
+
+.hospitalisation
+  .container
+    .row
+      .col-xs-12.col-md-6
+        %section
+          %header
+            %h3 Госпитализация больного
+          %form
+            .patient_phone
+              .field
+                %label Номер телефона
+                %input{type: 'text', placeholder: '+38093 856-96-11'}
+            .patient_inic
+              .field
+                %label Инициалы
+                %input{type: 'text'}
+            .patient_vozrast
+              .field
+                %label Полных лет
+                %nav
+                  %ul.nav.nav-pills
+                    %li
+                      %a{}
+                        %span 18 - 25
+                    %li
+                      %a{}
+                        %span 26 - 35
+                    %li
+                      %a{}
+                        %span 36 - 60
+                    %li
+                      %a{}
+                        %span от 60
+                %input.hidden{type: 'text'}
+            .patient_palata
+              .field
+                %label Номер палаты
+                %nav
+                  %ul.nav.nav-pills
+                    %li
+                      %a{}
+                        %span 1
+                    %li.active{title: 'интенсивной терапии'}
+                      %a{}
+                        %span
+                          .palata_number
+                            2
+
+                    %li
+                      %a{}
+                        %span 3
+                    %li
+                      %a{}
+                        %span 4
+                %input.hidden{type: 'text'}
+            .patient_doctor
+              .field
+                %label Лечащий врач
+                %nav
+                  %ul.nav.nav-pills
+                    %li.active
+                      %a{}
+                        %span Веревкин
+                    %li
+                      %a{}
+                        %span Копылова
+                    %li
+                      %a{}
+                        %span Иванов
+                    %li
+                      %a{}
+                        %span Петров
+                %input.hidden{type: 'text'}
+            .patient_diagnos
+              .field
+                %label Диагноз при госпитализации
+                %input{type: 'text'}
+            .action
+              .field
+                .patient_add
+                  %button.btn Госпитализировать
+      .col-xs-12.col-md-6
+        %section
+          %header
+            %h4
+              %a{} Журнал госпитализаций
+
+
+.patient_messages
+  .container
+    .row
+      .col-md-6
+        .jumbotron{style: 'margin: 0 0; padding: 0 0'}
+          %section{style: 'display: flex; align-items: center;'}
+            %h2.link_index
+              %a{href: '#'} Сообщения от пациентов
+            %span{style: 'font-size: 12pt; font-style: italic; position: relative; top: 4px; padding: 0 15px'} 6 новых
+          %section.patient_message
+            .message
+              %span.link_show
+                %a.patient_number{href: '#'} Пациент 7832
+              %span.message_date Сегодня, в 12:34
+              .message_body
+                — Медсестра, а сегодня будет обход?
+            .message_reply
+              %button.action_reply.btn.btn-primary{type: "button"} Ответ
+              %button.action_later.btn{type: "button"} Отложить
+            .message_form.hidden
+              %form
+                %textarea{style: 'width: 500px'}
+                %button.action_write.btn.btn-primary{type: "button"} Написать
+                %button.action_close.btn{type: "button"} Закрыть
+            .reply.hidden
+              .reply_body
+                — Сегодня обхода не будет. Обход проходит по вторникам и четвергам
+          %section.next_message.hidden
+            %button.btn.btn-primary{type: "button"} Следующее сообщение
+
+
+
+.patients
+  .container
+    .row
+      .col-xs-12.col-md-12
+        %section
+          %header
+            %h2.link_index
+              %a{href: '#'} Пациенты отделения
+          %patient
+            .patient_if
+              АС
+            .patient_number
+              № 35467
+            .patient_diagnose
+              Обострение язвенной болезни
+            .patient_age_sex
+              29 M
+            .palata
+              %a{href: '#'} палата № 6
+              .action
+                %a{href: '#'} Перевести в другую палату
+            .medical
+              %a{href: '#'} Капельница

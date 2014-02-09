@@ -1,0 +1,20 @@
+.patient_page {
+  border-top: 6px rgb(160, 232, 226) solid;
+  background: -webkit-linear-gradient(bottom, rgb(255, 255, 255) 0%, rgb(183, 232, 228) 100%) !important;
+
+}
+
+
+.documentation_page {
+  border-top: 6px rgb(160, 232, 226) solid;
+  background: -webkit-linear-gradient(bottom, rgb(255, 255, 255) 0%, rgb(183, 232, 228) 100%) !important;
+
+  .documents {
+    margin: 40px 0px 0px 0px;
+
+    .document_type, .document_size {
+      font-size: 13px;
+      color: darkgrey;
+    }
+  }
+}

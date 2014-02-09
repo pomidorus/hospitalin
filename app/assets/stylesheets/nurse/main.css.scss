@@ -1,0 +1,29 @@
+.main_nurse_page {
+
+  .day_raspisanie {
+    background-color: rgb(160, 232, 226);
+    padding: 12px 0px 13px 0px;
+  }
+
+}
+
+
+.documentation_nurse_page {
+
+  .day_raspisanie {
+    background-color: rgb(160, 232, 226);
+    padding: 12px 0px 13px 0px;
+  }
+
+
+  .documents {
+    margin: 20px 0px 0px 0px;
+
+    .document_type, .document_size {
+      font-size: 13px;
+      color: darkgrey;
+    }
+  }
+
+
+}

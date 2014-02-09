@@ -1,0 +1,45 @@
+.patient_page
+
+  -##Главная навигация доктора
+  .container
+    .row
+      .col-xs-12.col-md-12
+        %section.patient_navigation
+          %nav
+            %ul.nav.nav-pills
+              %li.active
+                %a{}
+                  %span Пациенты
+              %li
+                =link_to doctor_documentation_path do
+                  %span Документация
+
+  .patient_messages
+    .container
+      .row
+        .col-md-7
+          .jumbotron
+            %section{style: 'display: flex; align-items: center;'}
+              %h2.link_index
+                %a{href: '#'} Сообщения от пациентов
+              %span{style: 'font-size: 12pt; font-style: italic; position: relative; top: 4px; padding: 0 15px'} 6 новых
+            %section.patient_message
+              .message
+                %span.link_show
+                  %a.patient_number{href: '#'} Пациент 7832
+                %span.message_date Сегодня, в 12:34
+                .message_body
+                  — Доктор, а какие продукты мне можно кушать?
+              .message_reply
+                %button.action_reply.btn.btn-primary{type: "button"} Ответ
+                %button.action_later.btn{type: "button"} Отложить
+              .message_form.hidden
+                %form
+                  %textarea{style: 'width: 500px'}
+                  %button.action_write.btn.btn-primary{type: "button"} Написать
+                  %button.action_close.btn{type: "button"} Закрыть
+              .reply.hidden
+                .reply_body
+                  — Молочнокислые продукты, кефир, перетертый жидкий суп
+            %section.next_message.hidden
+              %button.btn.btn-primary{type: "button"} Следующее сообщение

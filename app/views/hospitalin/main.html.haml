@@ -30,7 +30,8 @@
                       = hidden_field_tag 'user[password]', 'testtest'
                       = hidden_field_tag 'user[remember_me]', 'yes'
                       = button_to 'Далее', nil, class: 'btn btn-primary'
-                %p demo: test@patient.com
+                %p demo: test_1@patient.com
+                %p demo: test_2@patient.com
 
     -#Форма авторизации для медсестры и врача
     .row
@@ -47,5 +48,8 @@
                       = hidden_field_tag 'user[password]', 'testtest'
                       = hidden_field_tag 'user[remember_me]', 'yes'
                       = button_to 'Далее', nil, class: 'btn btn-primary'
-                %p demo doctor: test@doctor.com
-                %p demo nurse: test@nurse.com
+                %p demo doctor: test_1@doctor.com
+                %p demo doctor: test_2@doctor.com
+
+                %p demo nurse: test_1@nurse.com
+                %p demo nurse: test_2@nurse.com

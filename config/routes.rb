@@ -15,5 +15,11 @@ Hospitalin::Application.routes.draw do
     get  'documentation', to: 'main#documentation', as: :documentation
   end
 
+  namespace :nurse do
+    root 'main#dashboard'
+    get  'documentation', to: 'main#documentation', as: :documentation
+  end
+
+
 end
 
